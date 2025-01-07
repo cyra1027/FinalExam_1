@@ -48,28 +48,8 @@ jobs:
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <form id="login-form">
-            <h1>Login</h1>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <button type="button" id="send-otp">Send OTP</button>
-
-            <label for="otp">OTP:</label>
-            <input type="text" id="otp" name="otp" required>
-
-            <button type="submit">Login</button>
-        </form>
-    </div>
-
-    <script src="login.js"></script>
-</body>
-</html>
-
-// CSS for Styling Login Page
-// File: styles.css
-body {
+  <style>
+    body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     display: flex;
@@ -116,9 +96,24 @@ button:hover {
     background-color: #45a049;
 }
 
-// JavaScript for Login Page
-// File: login.js
-document.getElementById('send-otp').addEventListener('click', function() {
+  </style>
+    <div class="login-container">
+        <form id="login-form">
+            <h1>Login</h1>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="button" id="send-otp">Send OTP</button>
+
+            <label for="otp">OTP:</label>
+            <input type="text" id="otp" name="otp" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+    document.getElementById('send-otp').addEventListener('click', function() {
     const email = document.getElementById('email').value;
     if (!email) {
         alert('Please enter your email address.');
@@ -143,3 +138,8 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     console.log(`Verifying OTP: ${otp}`);
     alert('Login successful!');
 });
+
+    </script>
+</body>
+</html>
+
