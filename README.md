@@ -199,7 +199,8 @@ const contactForm = document.getElementById('contact-form');
 if (signupForm) {
     signupForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Sign up form submitted!');
+        alert('Sign up successful! Redirecting to login...');
+        window.location.href = 'index.html';
     });
 }
 
